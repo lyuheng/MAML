@@ -172,9 +172,14 @@ if __name__ == '__main__':
     import time
 
     plt.ion()
-    mini = Mini_Imagenet('E:/meta_learning', mode='train', n_way=5, k_shot=1, k_query=1, batchsz=1000,resize=168)
+    mini = Mini_Imagenet('E:/meta_learning', mode='train', n_way=5, k_shot=1, k_query=1, batchsz=1000, resize=168)
     for i, set_ in enumerate(mini):
         support_x, support_y, query_x, query_y = set_
+        # torch.Size([5, 3, 168, 168]) 
+        # torch.Size([5]) 
+        # torch.Size([5, 3, 168, 168]) 
+        # torch.Size([5])
+
         support_x = make_grid(support_x, nrow=2)
         query_x = make_grid(query_x, nrow=2)
 

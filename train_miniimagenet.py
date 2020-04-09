@@ -6,7 +6,7 @@ import os, torch
 
 import numpy as np
 from miniImagenet import Mini_Imagenet
-from meta import Meta
+from imagenet_meta import Meta
 import torch.utils.data as data
 import torch.optim as optim
 import random, sys, pickle
